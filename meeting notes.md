@@ -1,12 +1,11 @@
-### Date: 2022.04.02
+## Date: 2022.04.02
 #### 1. Self-intro & Ice-breaking!  
 #### 2. Discussion: 数据分析组在Furiends的作用，以及现阶段可以做些什么  
 根据目前需求，AI可提供的技术：  
 -  上传视频/图片：压缩视频/图片；品种识别；视频美化（宠物照片对于能否成功吸引送养人至关重要）-- CV
 机构上架待领养宠物，提供照片
 图片：几何校正，补光，朦胧滤镜
-品种识别（npo需求确认）：训练公开数据集 
-[数据集](http://vision.stanford.edu/aditya86/ImageNetDogs/)
+品种识别（npo需求确认）：训练公开[数据集](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 优先进行：图片压缩和美化功能
 -  智能排序：帮助送走钉子户
 原因：年龄、疾病、非品种狗etc  
