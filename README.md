@@ -1,5 +1,5 @@
-# AI
-Progress management and resource share for AI team
+# AI: instructions of navigation 
+
 
 ### 1. Find meeting notes [here].
 ###
