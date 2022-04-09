@@ -1,4 +1,78 @@
-## Date: 2022.04.02
+## Furiends AI Team Weekly Meeting Minutes
+
+### Date: 2022.04.09
+
+#### Regular Weekly Meeting Time
+- default开会时间：Sat 10-11am (美东) / 10-11pm (国内）/ 3-4pm（东一区）
+- 备注：如果有成员来不及，可以提前商量，偶尔后延一小时
+
+#### Team Collaboration
+- Meeting Minutes - Google Doc
+- Resources/Work, Task Assignment - Github
+- Technical Discussion - Slack
+- Logistics Discussion - AI Team Wechat Group
+- Github id认人：Huiyu Chen , Haojun Cai (caicai), siyi415 (siyi), vio372925, My Wang (papa), Natalia (natalia)
+- 似乎还没有加入/无法从昵称判断：橘子，乱乱，jeni，落泽成海
+
+#### Research Update: CV - 图片压缩、美化
+- （papa）需求1：像素不够高、背景杂乱等 参考：[npo提供的待优化图片示例](https://github.com/Furiends/AI/blob/c7fa58f66e8509b522553b17861fb6259d28578c/blacklist.md) 👉 方法：替换背景，减少人工美化时间精力成本
+- （papa）需求2：品种分类，可能需要比较细的[花色分类](https://github.com/Furiends/AI/blob/0fdbdc8b632455c4933153b956c30ae063987714/imges/npo%E8%8A%B1%E8%89%B2%E5%88%86%E7%B1%BB%E9%9C%80%E6%B1%82.JPG)👉实现层面：npo可以提供多少训练样本？每一种可能需要200张图片以上
+
+- 需求3: 图片压缩，以节省存储、传输压力，到客户端之前都是压缩状态，之后解压 👉 方法：超分，对于视频可以进行抽帧
+
+#### Research Update: DA 
+##### 1. 黑名单数据收集
+- (siyi) 微博话题 #领养黑名单# 主要是组织和个人发布，发布的个人信息不一，一般是微信号截图、打码后的姓名、身份证号、电话、户籍、事由
+  - 信息发布格式不一，有文字有图片，可能需要人工整理、录入信息？
+  - 个人信息比较零散，如何定位/match到人？
+  - 信息真实性（黑名单的下一步：直接拉黑or更仔细的领养审核）？
+  - 数据比较少（3页），范围全国，较分散，需要拓展数据收集渠道
+  - 可以联系发布信息比较多的组织看能不能共享名单（e.g.波奇公益）
+  - 信息发布格式不一，有文字有图片，可能需要人工整理、录入信息？个人信息比较零散，如何定位/match到人？信息真实性（黑名单的下一步：直接拉黑or更仔细的领养审核）？
+- (siyi) 支付宝领养失信黑名单
+  - 支付宝搜索领养->点击“我要领养”小程序->首页“领养失信名单
+  - 文字列表形式，主要是微信号，也有其他信息，将名单人员分为”已被确认、已在救助圈出名的虐猫者和救助者拒绝的名单“ 
+- （npo）目前大概可以拿到几百条数据
+- 依托第三方平台信息背书，进行合作？：芝麻信用分、支付宝实名体系，形成约束
+
+##### 2. 智能排序&推荐
+- (siyi) [recommender system to find the ideal pet](https://e-82849.medium.com/animal-adoption-how-data-science-can-be-used-to-help-animals-in-shelter-30b980db7403)
+  - Use classification model to understand adopter preference
+  - Feature variables: animal type(dog/cat), intake condition, animal profile(breed, color, sex, neutered/sprayed.)
+  - Target Variable: adoption or euthanasia.
+  - Cross validated with logistic regression, KNN, decision trees, random forest and gradient boost (XGBoost, best performance)
+  - Results: people tend to adopt younger, neutered/spayed, miniature pets
+  - Recommender System: rerank the pets by age afterwards
+![image2](https://github.com/Furiends/AI/blob/ee933a82d4fdc6a9a775d1b86c0f056565ca1513/imges/recommender%20system%20example%20(1).png)
+- (siyi) Combine application + matching process
+  - Combine steps and make the process more efficient overall by having users fill out the application form upfront so that they will only be paired with good matches, reducing the likelihood they will be rejected and have to go through the whole process again. This method might feel lengthy, but we will use all the collected data to only show users pets that match their lifestyle, making the overall experience much more efficient and much less frustrating. It will also remove the necessity of filling out the same form for each pet separately.
+![image3](https://github.com/Furiends/AI/blob/246a10e7b218e205d38a12b81c18eaf66ce492a9/imges/recommendation%20matching%20(2).png)
+  - Example: Used by petfinder "PetFinder Quiz - find your perfect match"
+-（乱乱）双塔模型(dssm模型)：使用相对独立的两个复杂网络构建用户相关特征的user embedding和item相关特征（也就是宠物相关特征）的item embedding，计算score，从高到低进行排序
+- (siyi) 可以帮助“识别钉子户”的一些方法: 参考方法，可以部分参考结论（注意地域差异的影响）
+  - [Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation](https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2#Sec3)
+  - [Characterizing unsuccessful animal adoptions: age and breed predict the likelihood of return, reasons for return and post-return outcomes](https://www.nature.com/articles/s41598-021-87649-2#Sec8)
+
+##### 3. (Jeni) Database Research
+Reference: [Animal Adoption System](https://github.com/Furiends/AI/blob/a03e130dfccf37c0a236962110a471f6396a089b/resource/Animal%20Adoption%20System.pdf)
+Dataflow Diagram (on page 13/14)
+![image4](https://github.com/Furiends/AI/blob/e002e8b2d90090e69e9a811cbc9242d08d680553/imges/animal%20adoption%20dataflow%20diagram.png)
+
+#### Update from other teams/TPM
+- 数据库框架
+- 后端开发语言（python）
+- 产品形式：目前在小程序or网页中选择
+
+#### 本周任务
+- CV：确定背景分离和压缩等使用的模型，有数据支持的表现，自己试一下效果（papa，乱乱，橘子）
+- 向npo拿一些图片数据（papa）
+- DA: 找数据，学习智能推荐&排序相关模型（试一下具体code执行，效果）（caicai，落泽，siyi，jeni）
+- 和后端数据库确定variable制定和ai组可以做的部分（jeni）
+- DA: 数据分析开发平台确定（caicai，落泽，siyi，jeni）
+
+__________________________________________________________________________________________________________________________________________________________
+
+### Date: 2022.04.02
 #### Self-intro & Ice-breaking!  
 #### Discussion: 数据分析组在Furiends的作用，以及现阶段可以做些什么  
 根据目前需求，AI可提供的技术：  
