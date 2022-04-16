@@ -15,7 +15,7 @@
 - 似乎还没有加入/无法从昵称判断：橘子，乱乱，jeni，落泽成海
 
 #### Research Update: CV - 图片压缩、美化
-- （papa）需求1：像素不够高、背景杂乱等 参考：[npo提供的待优化图片示例](https://github.com/Furiends/AI/blob/c7fa58f66e8509b522553b17861fb6259d28578c/blacklist.md) 👉 方法：替换背景，减少人工美化时间精力成本
+- （papa）需求1：像素不够高、背景杂乱等 参考：[npo提供的待优化图片示例](https://drive.google.com/drive/folders/1mMT4lDLm_rWZb-0qNGRLhOtppJb3o9oA?usp=sharing) 👉 方法：替换背景，减少人工美化时间精力成本
 - （papa）需求2：品种分类，可能需要比较细的[花色分类](https://github.com/Furiends/AI/blob/0fdbdc8b632455c4933153b956c30ae063987714/imges/npo%E8%8A%B1%E8%89%B2%E5%88%86%E7%B1%BB%E9%9C%80%E6%B1%82.JPG)👉实现层面：npo可以提供多少训练样本？每一种可能需要200张图片以上
 
 - 需求3: 图片压缩，以节省存储、传输压力，到客户端之前都是压缩状态，之后解压 👉 方法：超分，对于视频可以进行抽帧
