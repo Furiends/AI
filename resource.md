@@ -7,3 +7,5 @@ Table of Contents
   - [Characterizing unsuccessful animal adoptions: age and breed predict the likelihood of return, reasons for return and post-return outcomes](https://www.nature.com/articles/s41598-021-87649-2#Sec8)（钉子户识别）
 3. 数据库
   - [Animal Adoption System](https://github.com/Furiends/AI/blob/a03e130dfccf37c0a236962110a471f6396a089b/resource/Animal%20Adoption%20System.pdf)
+4. 背景移除效果参考
+  - [Petfinder](https://www.petfinder.com/cat-breeds/?page=6)
