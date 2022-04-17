@@ -19,5 +19,5 @@ Table of Contents
 
 - [Image Matting](https://paperswithcode.com/task/image-matting)（橘子：其中MODNet是之前一篇比较好的SOTA，同样可以看看现在有没有更优秀的工作）
 2. [Image Compression and Super Resolution example images](https://drive.google.com/drive/folders/1MswjD54NhYTs3-3jUbT4VDChCIETi3EP?usp=sharing)
-3. 背景移除效果参考
-- [Petfinder](https://www.petfinder.com/cat-breeds/?page=6)
+3. [背景移除效果参考Petfinder](https://www.petfinder.com/cat-breeds/?page=6)  
+4. [NPO提供的照片](https://drive.google.com/drive/folders/1mMT4lDLm_rWZb-0qNGRLhOtppJb3o9oA)
