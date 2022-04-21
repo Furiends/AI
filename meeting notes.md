@@ -1,5 +1,92 @@
 ## Furiends AI Team Weekly Meeting Minutes
 
+### Date: 2022.4.16
+
+#### NPO - 图片美化的建议（小韩）
+
+- 图片的常见问题：
+(1)照片清晰，背景清晰
+(2)光线
+(3)视角奇怪
+(4)照片不够吸引人，不能体现动物的亲人属性
+- 理想的照片：
+(1)全身，平视，背景不杂乱
+(2)希望一张图可以反映尽可能多的信息
+- 解决方案：希望可以有用户拍摄指引（在框中拍摄）+cv工作（前后背景分离，光线调整)
+
+#### CV
+
+(papa)
+- 收集到实拍的几十张图片
+  见github
+- 背景分离示例：removal.ai
+- 如果照片是动物关在笼子中的，可能无法处理，需要首先拍出合格照片，减少编辑成本
+- 加背景，增加生活信息
+
+(乱乱)
+- 通过爬虫收集到一些毛色分辨数据集（问题：是不是需要精度那么高？很难达成）
+- 明确精度：识别大致颜色，大类品种
+
+(橘子)
+- 显著性检测 -> image matting 增加羽化效果
+- 压缩图片示例：scale/resize 和 超分的区别（可以后续和前端确认）
+
+#### Updates from other teams：
+- （需要确认）目前第一步to b和to c端都从做小程序入手
+- （需要确认）数据库框架
+
+#### DA
+
+（Caicai）
+
+- Recommendation:
+c.f. https://towardsdatascience.com/recommendation-systems-explained-a42fc60591ed 
+NOT a binary classification → output how likely the pet and the user is a good match
+
+- Method 1: Model-based Collaborative Filtering Recommendation
+  - Con: not friendly for recommending new items – cold-start problem
+  - Input：c.f. Siyi Notes
+  - 动物：长相（玳瑁猫 – 性格普遍很好、三花猫很难被领养），年龄（超过2岁就比较难送出去），伤病史（猫瘟等），猫 / 狗，具体品种，性别，是否绝育（大部分不在乎是否绝育），是否打疫苗（大部分不在乎是否打疫苗）、颜色
+  - 用户：
+（1）职业：什么样的职业 - 什么种类high ranking
+（2）是否wfh：Yes / No - rankin
+（3）家住人口
+（4）是否有自己的庭院
+（5）是否已经有宠物
+（6）房子大小：大房子-大型犬，小房子-小型犬
+  - Output：probability / score / ranking
+  - Models：gradient boosting / random forest + cross validation
+  - Training data: 根据有倾向性的特征赋值，其他特征随机，训练模型
+  - Pet features - rankings: in general these combinations would have a higher ranking to be liked ←→ 钉子户问题
+  - User features - pet rankings: build connections btw user profile - ranking
+  - Constantly changing: Clicked pet photo + stay time - more training data rsp rankings
+Clicked pet photo + stay time ~ more training data rsp rankings
+
+- Method 2: Content-based Recommendation
+  - Generates recommendations based on users preferences and profile
+  - Model: cosine similarity between two vectors
+
+- Combined Recommendations
+  - Random photos + 钉子户photos
+  - Once a user has clicked a photo
+  - Return most similar 50 pets using Method 2
+  - Compute the predicted ratings of these 50 pets using Method 1 with more training data
+  - Return 10 pets with most highest rankings
+
+- Memory-based Collaborative Filtering Recommendation: Singular value decomposition (SVD)
+  - User-based — give recommendations based on similar users
+  - item-based — give recommendations based on similar items
+
+- 非结构化数据NoSQL + MongoDB
+
+- 本周任务：
+  - DA：重点放在疏通“推荐方法”，同时尝试网络收集数据集作为training data
+  - CV：imaging matching，resize/upsample/downsample等方法实现
+  - 确认数据库架构（potentially跨组会议）（Natalia）
+  - potentially和其他组织的技术人员经验交流（小韩）
+
+______________________________________________________________________________________________________________________________________________________
+
 ### Date: 2022.04.09
 
 #### Regular Weekly Meeting Time
