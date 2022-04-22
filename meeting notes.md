@@ -135,7 +135,7 @@ ________________________________________________________________________________
   - Combine steps and make the process more efficient overall by having users fill out the application form upfront so that they will only be paired with good matches, reducing the likelihood they will be rejected and have to go through the whole process again. This method might feel lengthy, but we will use all the collected data to only show users pets that match their lifestyle, making the overall experience much more efficient and much less frustrating. It will also remove the necessity of filling out the same form for each pet separately.
 ![image3](https://github.com/Furiends/AI/blob/246a10e7b218e205d38a12b81c18eaf66ce492a9/imges/recommendation%20matching%20(2).png)
   - Example: Used by petfinder "PetFinder Quiz - find your perfect match"
--（乱乱）双塔模型(dssm模型)：使用相对独立的两个复杂网络构建用户相关特征的user embedding和item相关特征（也就是宠物相关特征）的item embedding，计算score，从高到低进行排序
+- (乱乱）双塔模型(dssm模型)：使用相对独立的两个复杂网络构建用户相关特征的user embedding和item相关特征（也就是宠物相关特征）的item embedding，计算score，从高到低进行排序
 - (siyi) 可以帮助“识别钉子户”的一些方法: 参考方法，可以部分参考结论（注意地域差异的影响）
   - [Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation](https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2#Sec3)
   - [Characterizing unsuccessful animal adoptions: age and breed predict the likelihood of return, reasons for return and post-return outcomes](https://www.nature.com/articles/s41598-021-87649-2#Sec8)
