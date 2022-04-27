@@ -1,5 +1,35 @@
 ## Furiends AI Team Weekly Meeting Minutes
 
+### Date: 2022.4.23
+
+#### CV
+（乱乱）
+- 收集各种类猫图片，大概1000多张（待清理）+kaggle数据集+papa找到的oxford dataset
+- 正在做宠物种类分类demo，下周可以数据测试
+
+#### DA
+
+(Siyi) BMC Veterinary Research: Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation
+
+- To increase the adoption rates at animal shelters
+- predict the length of stay of each animal at shelters
+- key features: animal type (dog, cat, etc.), age, gender, breed, animal size and shelter location
+- Important factors: age for dogs (puppy, super senior)
+- methods: logistic regression, artificial neural network, gradient boosting (best performance!) and the random forest algorithms
+- metrics: precision, recall and F1 score
+- public & private animal shelters: animal control, city and country animal shelters and police and health departments; rescue organization
+![image6](https://github.com/Furiends/AI/blob/a19790daf106ce484085fa0a6bb4ff2080ef2006/imges/lit%20review%20(2).png)
+- data collected from individual shelter, no nationwide database (US)
+- Public dataset: https://data.louisvilleky.gov/search/type/dataset
+- data cleaning methods:
+![image5](https://github.com/Furiends/AI/blob/a19790daf106ce484085fa0a6bb4ff2080ef2006/imges/lit%20review%20(1).png)
+- Boosting algorithms: use various algorithms (decision trees, logistic regression, neural networks) results to develop a new model —- leverage weighted averages to identify “weak classifiers”
+![image7](https://github.com/Furiends/AI/blob/a19790daf106ce484085fa0a6bb4ff2080ef2006/imges/lit%20review%20(3).png)
+- 10-fold cross-validation used in training data to avoid overfitting
+- number of trees changed from 100 to 1000 in increments of 100, a learning rate of 0.01, 0.05
+- The minimum observations for the trees’ terminal node are set to vary from 2 to 10 in increments of one, while the splitting of trees varies from 2 to 10 in increments of two.
+
+
 ### Date: 2022.4.16
 
 #### NPO - 图片美化的建议（小韩）
