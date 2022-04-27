@@ -29,6 +29,7 @@
 - number of trees changed from 100 to 1000 in increments of 100, a learning rate of 0.01, 0.05
 - The minimum observations for the trees’ terminal node are set to vary from 2 to 10 in increments of one, while the splitting of trees varies from 2 to 10 in increments of two.
 
+______________________________________________________________________________________________________________________________________________________
 
 ### Date: 2022.4.16
 
