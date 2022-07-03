@@ -21,3 +21,6 @@ Table of Contents
 2. [Image Compression and Super Resolution example images](https://drive.google.com/drive/folders/1MswjD54NhYTs3-3jUbT4VDChCIETi3EP?usp=sharing)
 3. [背景移除效果参考Petfinder](https://www.petfinder.com/cat-breeds/?page=6)  
 4. [NPO提供的照片](https://drive.google.com/drive/folders/1mMT4lDLm_rWZb-0qNGRLhOtppJb3o9oA)
+
+# git基础使用指南
+- [链接](https://hackmd.io/@wangmyde/HJWnXl1j9)
