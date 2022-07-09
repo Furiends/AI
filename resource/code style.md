@@ -4,7 +4,8 @@
 3. pet classifier (maintainer: 乱乱): https://github.com/Furiends/furiends-ai-pet-classifier
 
 # Code style
-1. docstrings: functions都需要(vs code有相应插件)
+1. docstrings: functions都需要(vs code有相应插件)  
+[Reference](https://sphinxcontribnapoleon.readthedocs.io/en/latest/example_google.html#:~:text=def%20function_with_types_in_docstring(,pep%2D0484/%0A%0A%20%20%20%20%22%22%22)
 ```
 def function_with_types_in_docstring(param1, param2):
     """Example function with types documented in the docstring.
